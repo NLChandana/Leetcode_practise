@@ -9,7 +9,7 @@ i/p: num1=123
      base=4
 o/p: 201
 */
-
+// Method 1
 
 #include <stdio.h>
 
@@ -33,7 +33,7 @@ int main()
     printf("%d",carry*place+res); 
 }
 
-
+// Method 2
 #include <stdio.h>
 
 int main()
