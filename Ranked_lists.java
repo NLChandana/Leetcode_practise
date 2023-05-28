@@ -6,4 +6,7 @@ Given a set of these ranked lists, interleave them to create a playlist that sat
 
 For example, suppose your input is
 ([1, 7, 3], [2, 1, 6, 7, 9], [3, 9, 5]). In this case a satisfactory playlist could be [2, 1, 6, 7, 3, 9, 5].
+
+This question would be easy if there is one more test case
+I am unable to figure it out😶
 */
