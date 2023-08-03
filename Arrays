@@ -1,4 +1,4 @@
-Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
+1. Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
 For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 import java.util.Scanner;
@@ -33,3 +33,37 @@ public class Main
 	    return 0;
 	}
 }
+
+2. Write a function that takes a list of integers as input and returns a new list with only the even numbers. Test it with a sample list.
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the number of elements: ");
+		int n = in.nextInt();
+	    ArrayList<Integer> arr = new ArrayList<>();
+	
+		System.out.println("Enter array elements:");
+	    for(int i=0;i<n;i++){
+	        arr.add(in.nextInt());
+	    }
+		System.out.println(evenList(arr));
+	}
+	
+	public static ArrayList evenList(ArrayList arr){
+	    ArrayList<Integer> new_arr = new ArrayList<>();
+	    for(int i=0;i<arr.size();i++){
+		    if(arr.get(i) % 2 == 0){
+		        new_arr.add(arr.get(i));
+		        
+		    }
+		}
+		return(new_arr);
+	}
+}
+
+
