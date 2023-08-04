@@ -66,4 +66,67 @@ public class Main
 	}
 }
 
+04/08/2023
+
+3. Write a Java program to check if a vowel is present in a string.
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Enter a string:");
+		Scanner in = new Scanner(System.in);
+		String str = in.nextLine();
+		
+		System.out.println(vowelsInString(str));
+	}
+	
+	public static ArrayList vowelsInString(String str){
+	    char[] vowel_list = {'a','e','i','o','u','A','E','I','O','U'};
+	   ArrayList new_vowel_list = new ArrayList();
+	    
+	    for(char character:str.toCharArray()){
+	        for(int vowel:vowel_list)
+	        if(character == vowel){
+	            new_vowel_list.add(character);
+	        }
+	    }
+	    return new_vowel_list;
+	}
+}
+// return input.toLowerCase().matches(".*[aeiou].*"); this is a code using regular expression
+
+4.Prime
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Enter a number:");
+		Scanner in = new Scanner(System.in);
+	    int num = in.nextInt();
+	    if(fact(num)){
+	        System.out.println("Prime");
+	    }
+	    else{
+	        System.out.println("Not Prime");
+	    }
+	    
+	}
+	public static boolean fact(int num){
+	    int fact=1;
+	    boolean result=true;
+	    int end=num/2;
+	    for(int i=2;i<end;i++){
+	        if(num%i==0){
+	        result=false;
+	       } 
+	    }
+	    return result;
+	}
+}
 
