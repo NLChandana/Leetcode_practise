@@ -1,0 +1,32 @@
+/*
+
+input:
+N=15
+div = 15
+
+output:30
+
+O(N) iterations
+ so dont use loop/iterations
+ 
+ N=12
+ div:4
+1+2+3+0+1+2+3+0+1+2+3+0
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int N, div, i, sum = 0;
+    scanf("%d%d",&N,&div);
+    /*for(i=1;i<=N;i++){
+        sum+=(i%div);
+    }
+    */
+    sum=(N/div)*((div-1)*(div/2))+((N%div)*(N%div+1)/2);
+    printf("%d",sum);
+    return 0;
+}
+
