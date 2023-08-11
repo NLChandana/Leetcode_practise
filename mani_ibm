@@ -25,8 +25,45 @@ int main()
         sum+=(i%div);
     }
     */
+
+
     sum=(N/div)*((div-1)*(div/2))+((N%div)*(N%div+1)/2);
     printf("%d",sum);
     return 0;
+}
+
+
+
+11/08/2023
+
+2. Splitting the number such that product of splitted numbers is max
+i/p:
+N:10
+o/p:
+36 
+*******************************************************************************/
+
+#include <stdio.h>
+#include<math.h>
+
+int split(int N);
+int main()
+{
+    int N;
+    scanf("%d",&N);
+    printf(" After splitting %d, it gives %d ",N,split(N);
+    return 0;
+   
+}
+int split(int N){
+    if(N%3 == 0){
+       return pow(3,N/3);
+   }
+   else if(N%3 == 1){
+       return pow(3,N/3-1)*2;
+   }
+   else if(N%3 == 2){
+       return pow(3,N/3)*2;
+   }
 }
 
