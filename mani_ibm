@@ -2,7 +2,7 @@
 
 input:
 N=15
-div = 15
+div = 5
 
 output:30
 
