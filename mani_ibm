@@ -27,7 +27,7 @@ int main()
     */
 
 
-    sum=(N/div)*((div-1)*(div/2))+((N%div)*(N%div+1)/2);
+    sum=(N/div)*((div-1)*div/2)+((N%div)*(N%div+1)/2);
     printf("%d",sum);
     return 0;
 }
