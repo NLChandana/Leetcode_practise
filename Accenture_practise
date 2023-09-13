@@ -66,7 +66,8 @@ You are given a function:
 
 int CheckPassword(char str[ ], int n);
 
-The function accepts string 'std of size int as argument Implement the function which returns 1 if given string 'str' is a valid password else 0. 
+The function accepts string 'std of size int as argument Implement the function which returns 1 
+if given string 'str' is a valid password else 0. 
 
 'str' is a valid password if it satisfies below conditions: 
 
@@ -85,10 +86,7 @@ Output:
 1 
 Code Solution in C++:
 
-
-
 Sample Input:
 
 a987 abC012 
-
 
