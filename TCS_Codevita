@@ -1,0 +1,98 @@
+10/11/2023
+convert the numbers into their equivalent names as follows
+1 -> one
+2 -> two
+3-> three
+4-> four
+5-> five as so on
+using C program
+
+
+input
+1  n = 9
+   list = 1,2,3,4,5
+   output
+   one ->(4,5)
+2  n = 3
+   list= 7 4 2
+   output
+   zero
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void num_string(int count){
+    switch(count){
+        case 0 : printf("zero"); break;
+        case 1 : printf("one"); break; 
+        case 2 : printf("two"); break;
+        case 3 : printf("three"); break;
+        case 4 : printf("four"); break;
+        case 5 : printf("five"); break;
+        case 6 : printf("six"); break;
+        case 7 : printf("seven"); break;
+        case 8 : printf("eight"); break;
+        case 9 : printf("nine"); break;
+
+    }
+}
+
+int vowelCount(int dig){
+    switch(dig)
+    {
+        case 0 : return(isVowel("zero")); break;
+        case 1 : return(isVowel("one")); break; 
+        case 2 : return(isVowel("two")); break;
+        case 3 : return(isVowel("three")); break;
+        case 4 : return(isVowel("four")); break;
+        case 5 : return(isVowel("five")); break;
+        case 6 : return(isVowel("six")); break;
+        case 7 : return(isVowel("seven")); break;
+        case 8 : return(isVowel("eight")); break;
+        case 9 : return(isVowel("nine")); break;
+
+    }
+}
+int isVowel(char s[]){
+    int sum=0;
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (s[i] == 'a' || s[i] =='e'|| s[i] =='i'|| s[i] =='o'|| s[i] =='u'){
+            sum += 1;
+        }
+    }
+    return sum;
+}
+
+void findPairs(int sum, int list[], int size) {
+    int count = 0;
+    for (int i = 0; i < size - 1; ++i) {
+        for (int j = i + 1; j < size; ++j) {
+            if (list[i] + list[j] == sum) {
+                count++;
+            }
+        }
+    }
+    num_string(count);
+}
+
+int main()
+{
+    int n;
+    int sum = 0;
+    printf("Enter the number of elements in the array:\n");
+    scanf("%d",&n);
+    int list[n];
+    printf("Enter array elements:\n");
+    for(int i=0;i<n;i++){
+        scanf("%d",&list[i]);
+    }
+    for(int i = 0; i < n; i++){
+        sum += vowelCount(list[i]);
+    }
+    printf("%d\n",sum);
+    findPairs(sum,list,n);
+    
+}
+
+
+
