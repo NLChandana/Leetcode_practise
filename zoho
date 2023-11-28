@@ -32,3 +32,48 @@ int main()
     }
     return 0;
 }
+
+SPLITTING NUMBER
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    
+    int num;
+    int power;
+    int p1;
+    int p2;
+    int smallest_num;
+    int largest_num;
+    int copy_num;
+    
+    num = 56003127;
+    power = 1;
+    copy_num = num;
+    smallest_num = num;
+    largest_num = num;
+    
+    do{
+        while(num / power > 9){
+            power *= 10;
+        }
+        p1 = num / power;
+        p2 = num % power;
+        
+        num = p2 * 10 + p1;
+        
+        if(num < smallest_num){
+            smallest_num = num;
+        }
+        if(num > largest_num){
+            largest_num = num;
+        }
+    }while(copy_num != num);
+    
+    printf("%d \n",smallest_num);
+    printf("%d ",largest_num);
+    
+    
+    return 0;
+}
