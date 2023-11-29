@@ -32,7 +32,7 @@ int main()
     }
     return 0;
 }
-
+-----------------------------------------------------
 SPLITTING NUMBER
 
 #include<stdio.h>
@@ -77,3 +77,103 @@ int main(){
     
     return 0;
 }
+
+------------------------------------------------------------------------------------
+29/11/2023
+Given a string, reverse only vowels in it; leaving rest of the string as it is.
+Input : abcdef
+Output : ebcdaf
+this is a test sentence
+
+thes es e test santinci
+
+this is a test sentence
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int isVowel(char ch){
+        return(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+           ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U');
+    }
+
+int main()
+{
+    
+    char arr[] = "I am Chandana Lakshmi Priya";
+    int first;
+    int last;
+    char temp;
+    
+    printf("%s\n",arr);
+    first = 0;
+    last = strlen(arr)-1;
+    
+    while(first < last){
+        while(!isVowel(arr[first])){
+            first++;
+        }
+        while(!isVowel(arr[last])){
+            last--;
+        }
+        temp = arr[first];
+        arr[first] = arr[last];
+        arr[last] = temp;
+        
+        first++;
+        last--;
+    }
+    
+    printf("%s",arr);
+ 
+    return 0;
+}
+----------------------------------------------------------------------
+Reverse a string
+
+I am Chandana Lakshmi Priya
+ayirP imhskaL anadnahC ma I
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int isVowel(char ch){
+        if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||\
+           ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+           return 1;
+    }
+
+int main()
+{
+    
+    char arr[] = "I am Chandana Lakshmi Priya";
+    int first;
+    int last;
+    char temp;
+    
+    printf("%s\n",arr);
+    first = 0;
+    last = strlen(arr)-1;
+    
+    while(first < last){
+        while(!isVowel(arr[first])){
+            first++;
+        }
+        while(!isVowel(arr[last])){
+            last--;
+        }
+        temp = arr[first];
+        arr[first] = arr[last];
+        arr[last] = temp;
+        
+        first++;
+        last--;
+    }
+    
+    printf("%s",arr);
+ 
+    return 0;
+}
+---------------------------------------------------------------------------------
