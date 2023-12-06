@@ -233,5 +233,57 @@ public class Main
 }
 
 ------------------------------------------------------------------------
+05/12/2023
 
+Finding the subsets of given set of elements using backtracking
+
+import java.util.*;
+
+public class Main{
+    
+     public static void calcSubset(List<Integer> list, List<List<Integer>> result,
+				   List<Integer> subset, int index){
+        result.add(new ArrayList<>(subset));
+        for(int i=index;i<list.size();i++){
+            subset.add(list.get(i));
+            calcSubset(list, result, subset, i+1);
+            subset.remove(subset.size() -1);
+        }
+    }
+    
+    
+     public static List<List<Integer>> subsets(List<Integer> list){
+        List<Integer> subset = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
+        int index = 0;
+        
+        calcSubset(list, result, subset, index);
+        return result;
+    }
+    
+    
+    public static void main(String args[]){
+        Scanner in = new Scanner(System.in);
+        List<Integer> list = new ArrayList<Integer>();
+        System.out.println("Enter the numbers of elements in the set:");
+        int n = in.nextInt();
+        System.out.println("Enter the elements:");
+        for(int i=0;i<n;i++){
+            int num = in.nextInt();
+            list.add(num);
+        }
+        in.close();
+        System.out.println(list);
+        List<List<Integer>> result = subsets(list);
+        for(List<Integer> subset: result){
+            for(Integer num : subset){
+                System.out.print(num+" ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
+
+-----------------------------------------------------------------------------------------
 
